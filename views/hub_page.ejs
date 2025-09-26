@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This meta tag is important. It tells Google to index this page and follow all the links on it. -->
+    <meta name="robots" content="index, follow"> 
+    <title>All Locations for <%= product.name %> | Janvi Packaging</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8 bg-gray-50">
+    <h1 class="text-3xl font-bold mb-4 text-gray-800">All Available Locations for <%= product.name %></h1>
+    <p class="mb-6 text-gray-600">This page provides a complete list of all our service areas for <%= product.name %> to assist search engine crawlers in discovering and indexing our content.</p>
+    
+    <!-- This is the loop that creates a link for every single location in your database -->
+    <ul class="list-disc list-inside space-y-1">
+        <% locations.forEach(location => { %>
+            <li>
+                <a href="/products/<%= product.slug %>/<%= location.slug %>" class="text-blue-600 hover:underline">
+                    <%= product.name %> in <%= location.city %>, <%= location.state %>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
+

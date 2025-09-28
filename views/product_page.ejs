@@ -402,7 +402,7 @@
                 </p>
                 <div class="max-w-4xl mx-auto">
                     <div class="bg-card-bg p-6 sm:p-8 form-container-style animate-on-scroll">
-                        <form id="contactForm" class="space-y-4">
+                        <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbyocJneBwSp6goiGtiUgEVIPTar_rohiLBwpU6KKfh97nU3vJ4GdhRSeyArmJ3K4SZI/exec" class="space-y-4">
                             <input type="hidden" name="Timestamp" id="timestamp">
                             <input type="hidden" name="Source Page" value="<%= product.name %> in <%= location.city %>">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -519,7 +519,7 @@
             contactForm.querySelector('button[type="submit"]').disabled = true;
             formMessage.classList.add('hidden');
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbykJIQXJYuuqxMiYntmZ2MdAB57NS3Yr2XzI5iChb_SUDHHaTNfs6te0A3M-3VkcpjNYg/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyocJneBwSp6goiGtiUgEVIPTar_rohiLBwpU6KKfh97nU3vJ4GdhRSeyArmJ3K4SZI/exec';
             const formData = new FormData(contactForm);
 
             try {

@@ -157,7 +157,7 @@
                 <a href="about-us.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">About</a>
                 <a href="https://janvipackaging.online/#products" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Products</a>
                 <a href="https://janvipackaging.online/#applications" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Applications</a>
-                <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full transition-colors text-sm">Contact Us</a>
+                <a href="https://janvipackaging.online/contact%20us.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full transition-colors text-sm">Contact Us</a>
             </nav>
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
@@ -169,7 +169,7 @@
             <a href="about-us.html" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">About</a>
             <a href="https://janvipackaging.online/#products" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">Products</a>
             <a href="https://janvipackaging.online/#applications" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">Applications</a>
-            <a href="contact.html" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
+            <a href="https://janvipackaging.online/contact%20us.html" class="block py-3 px-4 text-sm text-gray-700 hover:bg-gray-100">Contact Us</a>
         </div>
     </header>
     
@@ -236,7 +236,7 @@
                     Elevate your branding with the perfect label. Fill out the form below to get a custom quote on our premium Label Grade BOPP films for your business in <strong><%= location.city %></strong>.
                 </p>
                 <div class="max-w-2xl mx-auto bg-card-bg p-6 sm:p-8 form-container-style">
-                    <form id="contactForm" class="space-y-4">
+                    <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbyocJneBwSp6goiGtiUgEVIPTar_rohiLBwpU6KKfh97nU3vJ4GdhRSeyArmJ3K4SZI/exec" class="space-y-4">
                         <input type="hidden" name="Timestamp" id="timestamp">
                         <input type="hidden" name="Source Page" value="Label Grade BOPP Film Blog - <%= location.city %>">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -429,7 +429,7 @@
             loadingSpinner.classList.remove('hidden');
             contactForm.querySelector('button[type="submit"]').disabled = true;
             formMessage.classList.add('hidden');
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbykJIQXJYuuqxMiYntmZ2MdAB57NS3Yr2XzI5iChb_SUDHHaTNfs6te0A3M-3VkcpjNYg/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyocJneBwSp6goiGtiUgEVIPTar_rohiLBwpU6KKfh97nU3vJ4GdhRSeyArmJ3K4SZI/exec';
             const formData = new FormData(contactForm);
             try {
                 const response = await fetch(scriptURL, { method: 'POST', body: formData });
